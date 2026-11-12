@@ -1,0 +1,6 @@
+{
+  "name": "OTAY Policies & Compliance Hub",
+  "description": "البوابة الرسمية لسياسة الخصوصية، شروط الخدمة، وتعليمات حذف البيانات لتطبيق OTAY مع روابط مستقلة لكل سياسة لتوثيق Meta وإنستغرام.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

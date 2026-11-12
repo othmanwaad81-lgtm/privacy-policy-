@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "DeletionRequest": {
+      "title": "DeletionRequest",
+      "description": "A user-submitted Instagram data deletion request for OTAY application.",
+      "type": "object",
+      "properties": {
+        "instagramHandle": {
+          "type": "string",
+          "description": "Instagram username / handle for the account requesting deletion.",
+          "maxLength": 100,
+          "minLength": 1
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "Optional contact email address of the requester.",
+          "maxLength": 200
+        },
+        "status": {
+          "type": "string",
+          "description": "Processing status of the deletion request.",
+          "enum": ["pending", "in_review", "completed"]
+        },
+        "requestedAt": {
+          "type": "string",
+          "description": "ISO timestamp string when the request was initiated."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Server creation timestamp placeholder."
+        }
+      },
+      "required": ["instagramHandle", "status", "requestedAt"]
+    }
+  },
+  "firestore": {
+    "/deletion_requests/{requestId}": {
+      "schema": {
+        "$ref": "DeletionRequest"
+      },
+      "description": "Collection of user-submitted data deletion requests."
+    }
+  }
+}
